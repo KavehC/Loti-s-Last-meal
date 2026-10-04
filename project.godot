@@ -23,6 +23,10 @@ window/size/initial_position_type=0
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[dotnet]
+
+project/assembly_name="Contamination GDC"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
