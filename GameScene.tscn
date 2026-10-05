@@ -231,5 +231,3 @@ top_level = true
 position = Vector2(1703.0001, 1808)
 scale = Vector2(0.8577855, 0.75303274)
 texture = ExtResource("3_haeiw")
-
-[node name="TESTING GITHUB" type="Node" parent="." unique_id=43673286]
