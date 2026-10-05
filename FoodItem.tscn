@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://cgp3fb02tiulh"]
-
-[ext_resource type="Script" uid="uid://b7v75w8yavxn" path="res://FoodItem.cs" id="1_fjw7w"]
-
-[node name="FoodItem" type="Node2D" unique_id=1526996552]
-script = ExtResource("1_fjw7w")
