@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://d10nta7vvf1i7" path="res://scrips/scene_manager.gd" id="1_7s5hy"]
 [ext_resource type="Script" uid="uid://c6aejl4uy3rxo" path="res://scrips/game_state.gd" id="2_xs4ih"]
 [ext_resource type="Script" uid="uid://cjmmhbp1b5312" path="res://addons/StyleboxFancy/StyleBorder.gd" id="3_6ytau"]
+[ext_resource type="Script" uid="uid://dg8gglm8h0od" path="res://scrips/loti.gd" id="3_xs4ih"]
 [ext_resource type="Script" uid="uid://bkl6g25jwb47h" path="res://addons/StyleboxFancy/StyleBoxFancy.gd" id="4_vijgj"]
 [ext_resource type="Texture2D" uid="uid://dqos3wx4oo3a4" path="res://temp/cake.jpg" id="5_pynjx"]
 
@@ -77,6 +78,7 @@ script = ExtResource("2_xs4ih")
 [node name="LevelManager" type="Node" parent="." unique_id=222056778]
 
 [node name="Loti" type="Node" parent="." unique_id=1972142490]
+script = ExtResource("3_xs4ih")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=301792911]
 

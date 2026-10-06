@@ -14,11 +14,14 @@ func food_consumed() -> void:
 	if food_eaten >= food_required:
 		if next_level():
 			game_state.set_state(game_state.State.LEVEL_COMPLETE)
-	
+			
+	if current_level >= max_level and food_eaten >= food_required:
+		game_state.set_state(game_state.State.GAME_COMPLETE)
+		
 func next_level() -> bool:
 	if current_level < max_level and food_eaten >= food_required:
 		current_level += 1
 		food_eaten = 0
 		return true
-		
+	
 	return false

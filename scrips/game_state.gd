@@ -4,6 +4,7 @@ enum State {
 	PLAYING,
 	PAUSED,
 	GAME_OVER,
+	GAME_COMPLETE,
 	LEVEL_COMPLETE
 }
 
