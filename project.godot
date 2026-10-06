@@ -28,6 +28,10 @@ window/stretch/aspect="expand"
 
 project/assembly_name="Contamination GDC"
 
+[global_group]
+
+foodItems="The group that holds all the instances of a food item"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
