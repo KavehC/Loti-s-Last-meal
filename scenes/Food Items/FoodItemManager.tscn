@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://bjfc2igk2e8qu"]
 
 [ext_resource type="Script" uid="uid://bdlgvwij1ww7p" path="res://scrips/Food Items/food_item_manager.gd" id="1_4358o"]
+[ext_resource type="PackedScene" uid="uid://cgp3fb02tiulh" path="res://scenes/Food Items/FoodItem.tscn" id="2_2kagg"]
 
 [node name="FoodItemManager" type="Node2D" unique_id=1338905134]
 script = ExtResource("1_4358o")
+food_item_scene = ExtResource("2_2kagg")
