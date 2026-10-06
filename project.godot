@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Contamination GDC"
-run/main_scene="uid://bc1ilfmjy5a1w"
+run/main_scene="uid://bhmcf88nbhsj5"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 

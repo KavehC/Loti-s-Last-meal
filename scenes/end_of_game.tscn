@@ -8,6 +8,12 @@ font_size = 100
 [sub_resource type="LabelSettings" id="LabelSettings_n5n05"]
 font_size = 50
 
+[sub_resource type="LabelSettings" id="LabelSettings_fp47y"]
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_k3cw6"]
+font_size = 50
+
 [node name="EndOfGame" type="Control" unique_id=1025072157]
 layout_mode = 3
 anchors_preset = 15
@@ -61,6 +67,17 @@ offset_top = 0.35998535
 offset_right = -0.11999512
 offset_bottom = -0.47998047
 
+[node name="Label" type="Label" parent="MainMenuButton" unique_id=1845035626]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.99200004
+anchor_bottom = 0.975
+offset_right = -0.1920166
+text = "Main Menu"
+label_settings = SubResource("LabelSettings_fp47y")
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="RestartButton" type="Button" parent="." unique_id=306010201]
 layout_mode = 1
 anchors_preset = -1
@@ -72,3 +89,14 @@ offset_left = -0.16003418
 offset_top = -0.08001709
 offset_right = -0.32006836
 offset_bottom = -8.47998
+
+[node name="Label" type="Label" parent="RestartButton" unique_id=33793557]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.99200004
+anchor_bottom = 0.975
+offset_right = -0.1920166
+text = "Restart"
+label_settings = SubResource("LabelSettings_k3cw6")
+horizontal_alignment = 1
+vertical_alignment = 1

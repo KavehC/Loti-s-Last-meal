@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://dg8gglm8h0od" path="res://scrips/loti.gd" id="3_xs4ih"]
 [ext_resource type="Script" uid="uid://bkl6g25jwb47h" path="res://addons/StyleboxFancy/StyleBoxFancy.gd" id="4_vijgj"]
 [ext_resource type="Texture2D" uid="uid://dqos3wx4oo3a4" path="res://temp/cake.jpg" id="5_pynjx"]
+[ext_resource type="Script" uid="uid://bf1a0wldx4mrk" path="res://scrips/lotis_death_button.gd" id="7_6ytau"]
 
 [sub_resource type="Resource" id="Resource_p3ptu"]
 script = ExtResource("3_6ytau")
@@ -66,6 +67,10 @@ content_margin_bottom = -1.0
 script = ExtResource("4_vijgj")
 borders = Array[ExtResource("3_6ytau")]([SubResource("Resource_haeiw")])
 metadata/_custom_type_script = "uid://bkl6g25jwb47h"
+
+[sub_resource type="LabelSettings" id="LabelSettings_l6cm7"]
+font_size = 50
+font_color = Color(0, 0, 0, 1)
 
 [node name="GameScene" type="Node2D" unique_id=965530456]
 
@@ -136,7 +141,7 @@ position = Vector2(793.6476, 770.2344)
 scale = Vector2(0.68205726, 0.414491)
 texture = ExtResource("5_pynjx")
 
-[node name="Button2" type="Button" parent="CanvasLayer/UI/BottomBar" unique_id=90410244]
+[node name="LotisDeathButton" type="Button" parent="CanvasLayer/UI/BottomBar" unique_id=90410244]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.505
@@ -151,8 +156,9 @@ theme_override_font_sizes/font_size = 80
 theme_override_styles/normal = SubResource("StyleBox_glbvi")
 theme_override_styles/pressed = SubResource("StyleBox_svv2g")
 theme_override_styles/hover = SubResource("StyleBox_k77ap")
+script = ExtResource("7_6ytau")
 
-[node name="Label" type="Label" parent="CanvasLayer/UI/BottomBar/Button2" unique_id=246529312]
+[node name="Label" type="Label" parent="CanvasLayer/UI/BottomBar/LotisDeathButton" unique_id=246529312]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.58100003
@@ -163,12 +169,13 @@ offset_right = 0.1605835
 offset_bottom = -0.152771
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 105
-text = "Cake
+text = "Loti's Health Zero
 "
+label_settings = SubResource("LabelSettings_l6cm7")
 horizontal_alignment = 1
 vertical_alignment = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/UI/BottomBar/Button2" unique_id=239958015]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/UI/BottomBar/LotisDeathButton" unique_id=239958015]
 top_level = true
 position = Vector2(1750.1343, 773.68555)
 scale = Vector2(0.637697, 0.39529756)
