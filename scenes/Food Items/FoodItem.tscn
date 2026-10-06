@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://cgp3fb02tiulh"]
 
-[ext_resource type="Script" uid="uid://b7v75w8yavxn" path="res://scrips/Food Items/FoodItem.cs" id="1_fbia8"]
+[ext_resource type="Script" uid="uid://cq6oj4urbfu21" path="res://scrips/Food Items/food_item.gd" id="1_d5cjl"]
+[ext_resource type="Texture2D" uid="uid://dqos3wx4oo3a4" path="res://temp/cake.jpg" id="2_s40b8"]
 
 [node name="FoodItem" type="Node2D" unique_id=1526996552]
-script = ExtResource("1_fbia8")
+script = ExtResource("1_d5cjl")
+food_name = "Cake"
+icon = ExtResource("2_s40b8")
