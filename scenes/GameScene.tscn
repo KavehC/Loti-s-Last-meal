@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://bc1ilfmjy5a1w"]
 
-[ext_resource type="Script" uid="uid://cjmmhbp1b5312" path="res://addons/StyleboxFancy/StyleBorder.gd" id="1_k77ap"]
-[ext_resource type="Script" uid="uid://bkl6g25jwb47h" path="res://addons/StyleboxFancy/StyleBoxFancy.gd" id="2_haeiw"]
-[ext_resource type="Texture2D" uid="uid://dqos3wx4oo3a4" path="res://temp/cake.jpg" id="3_haeiw"]
+[ext_resource type="Script" uid="uid://d10nta7vvf1i7" path="res://scrips/scene_manager.gd" id="1_7s5hy"]
+[ext_resource type="Script" uid="uid://c6aejl4uy3rxo" path="res://scrips/game_state.gd" id="2_xs4ih"]
+[ext_resource type="Script" uid="uid://cjmmhbp1b5312" path="res://addons/StyleboxFancy/StyleBorder.gd" id="3_6ytau"]
+[ext_resource type="Script" uid="uid://bkl6g25jwb47h" path="res://addons/StyleboxFancy/StyleBoxFancy.gd" id="4_vijgj"]
+[ext_resource type="Texture2D" uid="uid://dqos3wx4oo3a4" path="res://temp/cake.jpg" id="5_pynjx"]
 
 [sub_resource type="Resource" id="Resource_p3ptu"]
-script = ExtResource("1_k77ap")
+script = ExtResource("3_6ytau")
 color = Color(0.86603606, 0.5695779, 0.122882776, 1)
 width_left = 10
 width_top = 10
@@ -20,12 +22,12 @@ content_margin_left = -1.0
 content_margin_top = -1.0
 content_margin_right = -1.0
 content_margin_bottom = -1.0
-script = ExtResource("2_haeiw")
-borders = Array[ExtResource("1_k77ap")]([SubResource("Resource_p3ptu")])
+script = ExtResource("4_vijgj")
+borders = Array[ExtResource("3_6ytau")]([SubResource("Resource_p3ptu")])
 metadata/_custom_type_script = "uid://bkl6g25jwb47h"
 
 [sub_resource type="Resource" id="Resource_ppjd4"]
-script = ExtResource("1_k77ap")
+script = ExtResource("3_6ytau")
 color = Color(0.32775345, 0.9153253, 0.00088522077, 1)
 width_left = 10
 width_top = 10
@@ -40,12 +42,12 @@ content_margin_left = -1.0
 content_margin_top = -1.0
 content_margin_right = -1.0
 content_margin_bottom = -1.0
-script = ExtResource("2_haeiw")
-borders = Array[ExtResource("1_k77ap")]([SubResource("Resource_ppjd4")])
+script = ExtResource("4_vijgj")
+borders = Array[ExtResource("3_6ytau")]([SubResource("Resource_ppjd4")])
 metadata/_custom_type_script = "uid://bkl6g25jwb47h"
 
 [sub_resource type="Resource" id="Resource_haeiw"]
-script = ExtResource("1_k77ap")
+script = ExtResource("3_6ytau")
 color = Color(0.9882353, 1, 0.16862746, 1)
 width_left = 10
 width_top = 10
@@ -60,17 +62,21 @@ content_margin_left = -1.0
 content_margin_top = -1.0
 content_margin_right = -1.0
 content_margin_bottom = -1.0
-script = ExtResource("2_haeiw")
-borders = Array[ExtResource("1_k77ap")]([SubResource("Resource_haeiw")])
+script = ExtResource("4_vijgj")
+borders = Array[ExtResource("3_6ytau")]([SubResource("Resource_haeiw")])
 metadata/_custom_type_script = "uid://bkl6g25jwb47h"
 
 [node name="GameScene" type="Node2D" unique_id=965530456]
 
 [node name="SceneManager" type="Node" parent="." unique_id=677912754]
+script = ExtResource("1_7s5hy")
 
 [node name="GameState" type="Node" parent="." unique_id=343874605]
+script = ExtResource("2_xs4ih")
 
 [node name="LevelManager" type="Node" parent="." unique_id=222056778]
+
+[node name="Loti" type="Node" parent="." unique_id=1972142490]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=301792911]
 
@@ -126,7 +132,7 @@ vertical_alignment = 2
 top_level = true
 position = Vector2(793.6476, 770.2344)
 scale = Vector2(0.68205726, 0.414491)
-texture = ExtResource("3_haeiw")
+texture = ExtResource("5_pynjx")
 
 [node name="Button2" type="Button" parent="CanvasLayer/UI/BottomBar" unique_id=90410244]
 layout_mode = 1
@@ -164,7 +170,7 @@ vertical_alignment = 2
 top_level = true
 position = Vector2(1750.1343, 773.68555)
 scale = Vector2(0.637697, 0.39529756)
-texture = ExtResource("3_haeiw")
+texture = ExtResource("5_pynjx")
 
 [node name="Button3" type="Button" parent="CanvasLayer/UI/BottomBar" unique_id=459709603]
 layout_mode = 1
@@ -199,7 +205,7 @@ vertical_alignment = 2
 top_level = true
 position = Vector2(785, 969)
 scale = Vector2(0.71581244, 0.3701869)
-texture = ExtResource("3_haeiw")
+texture = ExtResource("5_pynjx")
 
 [node name="Button4" type="Button" parent="CanvasLayer/UI/BottomBar" unique_id=1460001243]
 layout_mode = 1
@@ -236,4 +242,4 @@ vertical_alignment = 2
 top_level = true
 position = Vector2(1750.1477, 973.7344)
 scale = Vector2(0.6419731, 0.37862617)
-texture = ExtResource("3_haeiw")
+texture = ExtResource("5_pynjx")

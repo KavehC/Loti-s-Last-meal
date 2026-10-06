@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://b3hidj6v2jj7i"]
+
+[ext_resource type="Script" uid="uid://c2tqq0quetwee" path="res://scrips/game_over.gd" id="1_xeevv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_sw4dg"]
+font_size = 100
+
+[sub_resource type="LabelSettings" id="LabelSettings_n5n05"]
+font_size = 30
+
+[node name="GameOver" type="Control" unique_id=753926030]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xeevv")
+
+[node name="GameOverLabel" type="Label" parent="." unique_id=1394052296]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.30400002
+anchor_top = 0.108
+anchor_right = 0.646
+anchor_bottom = 0.50600004
+offset_left = -0.6800537
+offset_top = 0.3600006
+offset_right = 0.67993164
+offset_bottom = 0.5199585
+text = "Game Over"
+label_settings = SubResource("LabelSettings_sw4dg")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="MessageLabel" type="Label" parent="." unique_id=318641339]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.32000002
+anchor_top = 0.48200002
+anchor_right = 0.634
+anchor_bottom = 0.77400005
+offset_left = 0.5999756
+offset_top = 0.44000244
+offset_right = -0.2800293
+offset_bottom = 0.079956055
+text = "Do you want to restart?"
+label_settings = SubResource("LabelSettings_n5n05")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RestartButton" type="Button" parent="." unique_id=230658779]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.162
+anchor_top = 0.80300003
+anchor_right = 0.45600003
+anchor_bottom = 0.96900004
+offset_left = -0.040008545
+offset_top = -0.24005127
+offset_right = -0.52008057
+offset_bottom = -0.52001953
+
+[node name="MainMenuButton" type="Button" parent="." unique_id=973297567]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.55600005
+anchor_top = 0.795
+anchor_right = 0.84900004
+anchor_bottom = 0.96900004
+offset_left = -0.5201416
+offset_top = 0.39996338
+offset_right = 0.9199219
+offset_bottom = -8.52002
