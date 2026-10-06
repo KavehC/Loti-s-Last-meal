@@ -64,7 +64,13 @@ script = ExtResource("2_haeiw")
 borders = Array[ExtResource("1_k77ap")]([SubResource("Resource_haeiw")])
 metadata/_custom_type_script = "uid://bkl6g25jwb47h"
 
-[node name="Node2D" type="Node2D" unique_id=965530456]
+[node name="GameScene" type="Node2D" unique_id=965530456]
+
+[node name="SceneManager" type="Node" parent="." unique_id=677912754]
+
+[node name="GameState" type="Node" parent="." unique_id=343874605]
+
+[node name="LevelManager" type="Node" parent="." unique_id=222056778]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=301792911]
 
@@ -118,8 +124,8 @@ vertical_alignment = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/UI/BottomBar/Button" unique_id=1162181261]
 top_level = true
-position = Vector2(760, 1429)
-scale = Vector2(0.8577855, 0.75303274)
+position = Vector2(793.6476, 770.2344)
+scale = Vector2(0.68205726, 0.414491)
 texture = ExtResource("3_haeiw")
 
 [node name="Button2" type="Button" parent="CanvasLayer/UI/BottomBar" unique_id=90410244]
@@ -156,8 +162,8 @@ vertical_alignment = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/UI/BottomBar/Button2" unique_id=239958015]
 top_level = true
-position = Vector2(1706.2684, 1427.6289)
-scale = Vector2(0.84923387, 0.74840087)
+position = Vector2(1750.1343, 773.68555)
+scale = Vector2(0.637697, 0.39529756)
 texture = ExtResource("3_haeiw")
 
 [node name="Button3" type="Button" parent="CanvasLayer/UI/BottomBar" unique_id=459709603]
@@ -191,8 +197,8 @@ vertical_alignment = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/UI/BottomBar/Button3" unique_id=743589968]
 top_level = true
-position = Vector2(760.00006, 1804.9999)
-scale = Vector2(0.8577855, 0.75303274)
+position = Vector2(785, 969)
+scale = Vector2(0.71581244, 0.3701869)
 texture = ExtResource("3_haeiw")
 
 [node name="Button4" type="Button" parent="CanvasLayer/UI/BottomBar" unique_id=1460001243]
@@ -228,8 +234,6 @@ vertical_alignment = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/UI/BottomBar/Button4" unique_id=325930839]
 top_level = true
-position = Vector2(1703.0001, 1808)
-scale = Vector2(0.8577855, 0.75303274)
+position = Vector2(1750.1477, 973.7344)
+scale = Vector2(0.6419731, 0.37862617)
 texture = ExtResource("3_haeiw")
-
-[node name="TESTING GITHUB" type="Node" parent="." unique_id=43673286]
