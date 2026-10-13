@@ -79,6 +79,38 @@ metadata/_custom_type_script = "uid://bkl6g25jwb47h"
 font_size = 40
 font_color = Color(0, 0, 0, 1)
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_e8rlm"]
+blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_6pl24"]
+offsets = PackedFloat32Array(0, 0.9836601, 0.996732, 1)
+colors = PackedColorArray(0, 0.7058824, 0.003921569, 1, 0, 0, 0, 1, 0, 0.05490196, 0, 0, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_icif4"]
+gradient = SubResource("Gradient_6pl24")
+
+[sub_resource type="Curve" id="Curve_w22tq"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_kxqg4"]
+curve = SubResource("Curve_w22tq")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_qitmq"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 15.0
+spread = 180.0
+initial_velocity_min = 10.0
+initial_velocity_max = 30.0
+gravity = Vector3(0, 0, 0)
+damping_min = 10.0
+damping_max = 10.0
+scale_min = 1.5
+scale_max = 1.5
+scale_curve = SubResource("CurveTexture_kxqg4")
+color_ramp = SubResource("GradientTexture1D_icif4")
+
 [sub_resource type="LabelSettings" id="LabelSettings_6pl24"]
 font_size = 100
 
@@ -128,8 +160,9 @@ script = ExtResource("2_xs4ih")
 script = ExtResource("3_xs4ih")
 
 [node name="Loti\'s Image" type="Sprite2D" parent="Loti" unique_id=1743666344]
+scale = Vector2(1.2000002, 1.2000002)
 texture = ExtResource("4_pynjx")
-centered = false
+offset = Vector2(820, 400)
 
 [node name="Table" type="Node" parent="." unique_id=210084348]
 
@@ -196,9 +229,16 @@ vertical_alignment = 2
 
 [node name="Food One" type="Sprite2D" parent="CanvasLayer/UI/BottomBar/Option One" unique_id=1162181261]
 top_level = true
-position = Vector2(383.00003, 624)
-scale = Vector2(1.313, 0.96)
+position = Vector2(400, 425)
+scale = Vector2(1.5, 1.5)
 texture = ExtResource("5_pynjx")
+
+[node name="BadFoodParticles" type="GPUParticles2D" parent="CanvasLayer/UI/BottomBar/Option One/Food One" unique_id=152753538]
+z_index = -1
+material = SubResource("CanvasItemMaterial_e8rlm")
+scale = Vector2(1.5, 1.5)
+amount = 4
+process_material = SubResource("ParticleProcessMaterial_qitmq")
 
 [node name="Option One2" type="Button" parent="CanvasLayer/UI/BottomBar" unique_id=955803171]
 layout_mode = 1
@@ -236,9 +276,16 @@ vertical_alignment = 2
 
 [node name="Food One" type="Sprite2D" parent="CanvasLayer/UI/BottomBar/Option One2" unique_id=1500469131]
 top_level = true
-position = Vector2(941, 623)
-scale = Vector2(1.2844387, 0.960163)
+position = Vector2(990, 425)
+scale = Vector2(1.5, 1.5)
 texture = ExtResource("5_pynjx")
+
+[node name="BadFoodParticles" type="GPUParticles2D" parent="CanvasLayer/UI/BottomBar/Option One2/Food One" unique_id=838710554]
+z_index = -1
+material = SubResource("CanvasItemMaterial_e8rlm")
+scale = Vector2(1.5, 1.5)
+amount = 4
+process_material = SubResource("ParticleProcessMaterial_qitmq")
 
 [node name="Option One3" type="Button" parent="CanvasLayer/UI/BottomBar" unique_id=174538250]
 layout_mode = 1
@@ -276,9 +323,16 @@ vertical_alignment = 2
 
 [node name="Food One" type="Sprite2D" parent="CanvasLayer/UI/BottomBar/Option One3" unique_id=799933769]
 top_level = true
-position = Vector2(1561, 622)
-scale = Vector2(1.404, 0.96)
+position = Vector2(1580, 425)
+scale = Vector2(1.5, 1.5)
 texture = ExtResource("5_pynjx")
+
+[node name="BadFoodParticles" type="GPUParticles2D" parent="CanvasLayer/UI/BottomBar/Option One3/Food One" unique_id=1635530582]
+z_index = -1
+material = SubResource("CanvasItemMaterial_e8rlm")
+scale = Vector2(1.5, 1.5)
+amount = 4
+process_material = SubResource("ParticleProcessMaterial_qitmq")
 
 [node name="end_of_game" type="Node2D" parent="CanvasLayer/UI" unique_id=1368246213]
 position = Vector2(372, 63)
@@ -370,6 +424,8 @@ text = "Credits:
 
 Grace Chen - Art
 Kaveh Charkhabi - Programming
+Daphne Kim - Additional
+Programming
 
 "
 label_settings = SubResource("LabelSettings_sw4dg")

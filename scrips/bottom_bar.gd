@@ -63,6 +63,17 @@ func _show_food_choices() -> void:
 
 		buttons[i].get_node("Label").text = food["name"]
 		buttons[i].get_node("Food One").texture = load(food["good"])
+		
+		# Loading particles around bad food
+		var badParticles = buttons[i].get_node("Food One/BadFoodParticles")
+		badParticles.emitting = false
+		badParticles.visible = false 
+		if food["is_bad"]:
+			badParticles.texture = load(food["good"])
+			badParticles.visible = true
+			badParticles.restart()
+			badParticles.emitting = true
+			
 		buttons[i].disabled = false
 
 	selection_in_progress = false
@@ -138,7 +149,7 @@ func _on_food_selected(index: int) -> void:
 		game_state.set_state(game_state.State.GAME_COMPLETE)
 		return
 
-	await get_tree().create_timer(5.0).timeout
+	await get_tree().create_timer(2.0).timeout
 
 	if not is_inside_tree():
 		return
