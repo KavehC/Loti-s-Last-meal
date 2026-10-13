@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://c6aejl4uy3rxo" path="res://scrips/game_state.gd" id="2_xs4ih"]
 [ext_resource type="Texture2D" uid="uid://d8wv8dlsgqto" path="res://asset/Raw Images/background.png" id="2_yrli1"]
 [ext_resource type="Script" uid="uid://cjmmhbp1b5312" path="res://addons/StyleboxFancy/StyleBorder.gd" id="3_6ytau"]
+[ext_resource type="AudioStream" uid="uid://ce31vniw3kbnq" path="res://audio/Chopin_-_Nocturne_No._1_in_B-flat_minor,_Op._9_No._1_(Olga_Gurevich).mp3" id="3_w22tq"]
 [ext_resource type="Script" uid="uid://dg8gglm8h0od" path="res://scrips/loti.gd" id="3_xs4ih"]
 [ext_resource type="Texture2D" uid="uid://bk3iacdn2454s" path="res://asset/Loti/default.png" id="4_pynjx"]
 [ext_resource type="Script" uid="uid://bkl6g25jwb47h" path="res://addons/StyleboxFancy/StyleBoxFancy.gd" id="4_vijgj"]
@@ -150,6 +151,10 @@ script = ExtResource("1_7s5hy")
 [node name="Background" type="Sprite2D" parent="SceneManager" unique_id=358335492]
 texture = ExtResource("2_yrli1")
 centered = false
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="SceneManager" unique_id=626010742]
+stream = ExtResource("3_w22tq")
+volume_db = -7.0
 
 [node name="GameState" type="Node" parent="." unique_id=343874605]
 script = ExtResource("2_xs4ih")
@@ -427,6 +432,10 @@ Kaveh Charkhabi - Programming
 Daphne Kim - Additional
 Programming
 
+Music: “Nocturne No. 1 in B-flat Minor, Op. 9, No. 1”
+Composer: Frédéric Chopin
+Piano performance: Olga Gurevich
+Recording source: Musopen via Wikimedia Commons
 "
 label_settings = SubResource("LabelSettings_sw4dg")
 
